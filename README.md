@@ -15,3 +15,5 @@ Iniziate a definire le prime operazioni CRUD con le relative view:
 
 creare il seeder per la tabella comics utilizzando il file in allegato.
 Buon lavoro!
+
+Esercizio consegnato.
