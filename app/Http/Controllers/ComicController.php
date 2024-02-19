@@ -85,7 +85,11 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        $socials = config('socials');
+        $links = config('link');
+        $footer = config('footerlink');
+        $banner = config('banner');
+        return view('edit', compact('comic', 'socials', 'links', 'footer', 'banner'));
     }
 
     /**
@@ -97,7 +101,21 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $editcomic = $request->all();
+
+        $comic->title = $editcomic['title'];
+        $comic->description = $editcomic['description'];
+        $comic->thumb = $editcomic['thumb'];
+        $comic->price = $editcomic['price'];
+        $comic->series = $editcomic['series'];
+        $comic->sale_date = $editcomic['sale_date'];
+        $comic->type = $editcomic['type'];
+        $comic->artists = $editcomic['artists'];
+        $comic->writers = $editcomic['writers'];
+
+        $comic->update();
+
+        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
 
     /**

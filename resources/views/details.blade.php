@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="jumbo">
-        <img src="{{ $comic['thumb'] }}" alt="">
+        <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
     </div>
     <div class="blueline"></div>
 
@@ -10,7 +10,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-8">
-                    <h2>{{ $comic['title'] }}</h2>
+                    <div class="d-flex gap-5 align-items-center">
+                        <h2>{{ $comic['title'] }}</h2>
+                        <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><button
+                                class="btn btn-warning btn-sm">EDIT</button></a>
+                    </div>
                     <div class="price mt-3 d-flex justify-content-between align-items-center">
                         <p>U.S. Price: <span class="text-white">{{ $comic['price'] }}</span></p>
                         <div class="available d-flex gap-3 align-items-center">
