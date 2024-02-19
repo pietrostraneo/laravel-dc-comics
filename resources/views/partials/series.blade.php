@@ -9,7 +9,7 @@
     </div>
     <div class="row">
         <div class="col-12 text-center pb-4">
-            <button class="btn btn-primary">LOAD MORE</button>
+            <a href="{{ route('comics.create') }}"><button class="btn btn-primary">ADD COMIC</button></a>
         </div>
     </div>
 </div>
