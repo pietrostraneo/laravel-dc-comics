@@ -1,4 +1,4 @@
-# Esercizio del 2024-02-17
+# Esercizio del 2024-02-17:
 
 **nome repo: laravel-dc-comics**
 
@@ -9,7 +9,7 @@ oggi create un nuovo progetto Laravel 9 per gestire un archivio di fumetti.
 Tramite gli appositi comandi artisan create un model con relativa migration e un resource controller.
 
 ### Milestone 2
-Iniziate a definire le prime operazioni CRUD con le relative view:
+Iniziate a definire le prime operazioni `CRUD` con le relative view:
 - index()
 - show()
 
@@ -18,7 +18,9 @@ Buon lavoro!
 
 Esercizio consegnato.
 
-# Esercizio di oggi del 2024-02-19
+
+
+# Esercizio del 2024-02-19:
 
 **nome repo: laravel-dc-comics**
 
@@ -28,4 +30,24 @@ oggi lavorate sulla stessa repo di ieri e svolgere le operazioni CRUD per la cre
 ### Bonus:
 Validare i campi inseriti con il metodo validate come visto a lezione (non fa niente che il testo dei messaggi sia in inglese).
 
-Esercizio Consegnato
+Esercizio Consegnato.
+
+
+
+# Esercizio del 2024-02-20:
+
+**nome repo: laravel-dc-comics**
+
+Ciao ragazzi,
+sempre lavorando sulla repo di ieri, aggiungere l'ultima crud, ovvero la cancellazione di un record e la validazione della form con messaggi personalizzati attraverso funzione validation all'interno del controller. (come visto a lezione)
+
+### BONUS 1:
+Permettere di confermare la cancellazione con un confirm alert.
+
+### BONUS 2:
+Gestire la validazione dei campi con le classi `StoreMODELLORequest` e `UpdateMODELLORequest`.
+
+### SUPER - BONUS:
+Gestire la conferma della cancellazione con una modale di bootstrap.
+
+Buon lavoro
