@@ -51,3 +51,5 @@ Gestire la validazione dei campi con le classi `StoreMODELLORequest` e `UpdateMO
 Gestire la conferma della cancellazione con una modale di bootstrap.
 
 Buon lavoro
+
+Esercizio Consegnato
