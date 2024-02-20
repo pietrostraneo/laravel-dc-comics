@@ -16,7 +16,8 @@
                             <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><button
                                     class="btn btn-warning btn-sm">EDIT</button></a>
 
-                            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="post">
+                            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="post"
+                                onsubmit="return confirm('Do you really want to delete this comic?')">
                                 @csrf
                                 @method('DELETE')
 
