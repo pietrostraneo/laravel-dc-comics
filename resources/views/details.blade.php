@@ -10,10 +10,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-8">
-                    <div class="d-flex gap-5 align-items-center">
+                    <div class="d-flex gap-5 align-items-center justify-content-between">
                         <h2>{{ $comic['title'] }}</h2>
-                        <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><button
-                                class="btn btn-warning btn-sm">EDIT</button></a>
+                        <div class="d-flex gap-4">
+                            <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><button
+                                    class="btn btn-warning btn-sm">EDIT</button></a>
+
+                            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-sm btn-danger">DELETE</button>
+                            </form>
+                        </div>
                     </div>
                     <div class="price mt-3 d-flex justify-content-between align-items-center">
                         <p>U.S. Price: <span class="text-white">{{ $comic['price'] }}</span></p>
