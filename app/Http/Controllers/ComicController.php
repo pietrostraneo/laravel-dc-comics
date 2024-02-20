@@ -47,15 +47,17 @@ class ComicController extends Controller
         $addcomic = $request->all();
         $comic = new Comic;
 
-        $comic->title = $addcomic['title'];
-        $comic->description = $addcomic['description'];
-        $comic->thumb = $addcomic['thumb'];
-        $comic->price = $addcomic['price'];
-        $comic->series = $addcomic['series'];
-        $comic->sale_date = $addcomic['sale_date'];
-        $comic->type = $addcomic['type'];
-        $comic->artists = $addcomic['artists'];
-        $comic->writers = $addcomic['writers'];
+        // $comic->title = $addcomic['title'];
+        // $comic->description = $addcomic['description'];
+        // $comic->thumb = $addcomic['thumb'];
+        // $comic->price = $addcomic['price'];
+        // $comic->series = $addcomic['series'];
+        // $comic->sale_date = $addcomic['sale_date'];
+        // $comic->type = $addcomic['type'];
+        // $comic->artists = $addcomic['artists'];
+        // $comic->writers = $addcomic['writers'];
+
+        $comic->fill($addcomic);
 
         $comic->save();
 
@@ -103,15 +105,17 @@ class ComicController extends Controller
     {
         $editcomic = $request->all();
 
-        $comic->title = $editcomic['title'];
-        $comic->description = $editcomic['description'];
-        $comic->thumb = $editcomic['thumb'];
-        $comic->price = $editcomic['price'];
-        $comic->series = $editcomic['series'];
-        $comic->sale_date = $editcomic['sale_date'];
-        $comic->type = $editcomic['type'];
-        $comic->artists = $editcomic['artists'];
-        $comic->writers = $editcomic['writers'];
+        // $comic->title = $editcomic['title'];
+        // $comic->description = $editcomic['description'];
+        // $comic->thumb = $editcomic['thumb'];
+        // $comic->price = $editcomic['price'];
+        // $comic->series = $editcomic['series'];
+        // $comic->sale_date = $editcomic['sale_date'];
+        // $comic->type = $editcomic['type'];
+        // $comic->artists = $editcomic['artists'];
+        // $comic->writers = $editcomic['writers'];
+
+        $comic->fill($editcomic);
 
         $comic->update();
 
